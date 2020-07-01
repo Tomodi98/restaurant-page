@@ -1,0 +1,1 @@
+Restaurant page project from [Odin](https://www.theodinproject.com/lessons/restaurant-page)
