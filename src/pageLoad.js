@@ -1,3 +1,8 @@
+import fastFood from './fast-food.png';
+
+const fastFoodImg = new Image();
+fastFoodImg.src = fastFood;
+
 const render = () => {
     //create content for homepage
     const location = document.getElementById('content');
@@ -9,9 +14,10 @@ const render = () => {
     element.innerHTML = 'At Fast Food Example we can make your food faster than you can order it. Don\'t believe us? You are welcome to stop by and see for yourself.';
     location.appendChild(element);
 
-    element = document.createElement('div');
-    element.innerHTML = '<img src="../img/fast-food.png" alt="a soft drink, some fries and a burger">';
-    location.appendChild(element);
+    //element = document.createElement('div');
+    //element.innerHTML = '<img src="../img/fast-food.png" alt="a soft drink, some fries and a burger">';
+    location.appendChild(fastFoodImg);
+    fastFoodImg.alt = 'a soft drink, some fries and a burger';
 }
 
 const navBar = (navBarTabs) => {

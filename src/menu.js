@@ -1,3 +1,20 @@
+import burger from './burger.png';
+import hotDog from './hot-dog.png';
+import Fries from './fries.jpg';
+import drinks from './drinks.jpg';
+
+const burgerImg = new Image();
+burgerImg.src = burger;
+
+const hotDogImg = new Image();
+hotDogImg.src = hotDog;
+
+const friesImg = new Image();
+friesImg.src = Fries;
+
+const drinksImg = new Image();
+drinksImg.src = drinks;
+
 const displayMenu = () => {
     const content = document.getElementById('content');
     let element = document.createElement('h1');
@@ -13,8 +30,10 @@ const displayMenu = () => {
 
     //burger
     element = document.createElement('div');
-    element.innerHTML = '<img src="../img/burger.png" alt="Burger" width="300">';
     div.appendChild(element);
+    element.appendChild(burgerImg);
+    burgerImg.alt = 'A delicious looking burger';
+    burgerImg.style.width = '300px';
 
     smallerDiv = element;
     element = document.createElement('div');
@@ -27,8 +46,11 @@ const displayMenu = () => {
 
     //hot dog
     element = document.createElement('div');
-    element.innerHTML = '<img src="../img/hot-dog.png" alt="Hot Dog" height="205" width="300">';
     div.appendChild(element);
+    element.appendChild(hotDogImg);
+    hotDogImg.alt = 'A delicious looking hot dog';
+    hotDogImg.style.width = '300px';
+    hotDogImg.style.height = '205px';
 
     smallerDiv = element;
     element = document.createElement('div');
@@ -41,12 +63,14 @@ const displayMenu = () => {
 
     //fries
     element = document.createElement('div');
-    element.innerHTML = '<img src="../img/fries.jpg" alt="French Fries" width="300">';
     div.appendChild(element);
+    element.appendChild(friesImg);
+    friesImg.alt = 'A portion of fries';
+    friesImg.style.width = '300px';
 
     smallerDiv = element;
     element = document.createElement('div');
-    element.innerHTML = 'French Fries';
+    element.innerHTML = 'Fries portion';
     smallerDiv.appendChild(element);
 
     element = document.createElement('div');
@@ -55,12 +79,14 @@ const displayMenu = () => {
 
     //drinks
     element = document.createElement('div');
-    element.innerHTML = '<img src="../img/drinks.jpg!d" alt="Drinks" width="300">';
     div.appendChild(element);
+    element.appendChild(drinksImg);
+    drinksImg.alt = 'Refreshing drinks';
+    drinksImg.style.width = '300px';
 
     smallerDiv = element;
     element = document.createElement('div');
-    element.innerHTML = 'Soft Drinks';
+    element.innerHTML = 'Soft drinks';
     smallerDiv.appendChild(element);
 
     element = document.createElement('div');
